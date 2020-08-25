@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "660854300289",
+    "firebase_url": "https://real-time-coffee-application.firebaseio.com",
+    "project_id": "real-time-coffee-application",
+    "storage_bucket": "real-time-coffee-application.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:660854300289:android:663dce3f1ab9c0c3c37780",
+        "android_client_info": {
+          "package_name": "com.mbuguacaleb.real_time_coffee_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "660854300289-br60qa5qfd5gemrbulieeitv4njhi7gc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDiWUVK4FWpY3bIEROvzZ47TFRKQkfvLBw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "660854300289-br60qa5qfd5gemrbulieeitv4njhi7gc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

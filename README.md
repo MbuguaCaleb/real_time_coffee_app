@@ -1,16 +1,30 @@
 # real_time_coffee_app
 
-A new Flutter project.
+**Notes**
 
-## Getting Started
+```
+In adding firebase sdk there is a  difference between the project level build.gradle and the app level
+build.gradle.
 
-This project is a starting point for a Flutter application.
+This is where we initialize our flutter applications.
 
-A few resources to get you started if this is your first Flutter project:
+In both and when i am importing third party packages i have to open the android folder.
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+(a)(<project>/build.gradle)
+
+(b)App-level build.gradle (<project>/<app-module>/build.gradle)
+
+We also must put some dependencies  from within flutter after importing external packages so as to make it easier for our app to communicate with firebase.
+
+firebase_auth: ^0.18.0+1
+cloud_firestore: ^0.14.0+2
+
+```
+
+**Developed by**
+
+```
+Mbugua Caleb
+
+```
