@@ -39,7 +39,16 @@ cloud_firestore: ^0.14.0+2
 
 (b)Any function that is asynchronous has to be preceeded with a FUTURE as its type.It is good practice for firebase functions and variables to have in types.
 
+When we have a variable with the type dynamic it means that it can be able to hold more than one datatype.
 
+Remember that flutter is strict.
+
+```
+
+**VS CODE FLUTTER SHOTCUTS**
+
+```
+(a) F5 does a hot reload of the application.
 
 
 ```
