@@ -45,6 +45,18 @@ Remember that flutter is strict.
 
 ```
 
+**STREAMS**
+
+```
+Fireabase constantly communicates with my application when there is a successful sign in  by emitting a user object
+back or null in the case that the user has logged  off/our is usuccessfult.
+
+Our flutter application  therefore can be able to listen to these Auth Changes and thus we can make a decision to redirect
+to the home page if the user has succesffully signed in.
+
+
+```
+
 **VS CODE FLUTTER SHOTCUTS**
 
 ```

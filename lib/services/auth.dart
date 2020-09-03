@@ -14,6 +14,16 @@ class AuthService {
     return user != null ? User(uid: user.uid) : null;
   }
 
+  //auth change user stream
+  Stream<User> get user {
+    //the user object which we get is implicitly  applied to our
+    //function so as to format it
+    //Remember that the user object we receive from FIREBASE is a
+    //Firebase user type.
+    //<FirebaseUser user>
+    return _auth.onAuthStateChanged.map(_userFromFirebaseUser);
+  }
+
   //sign in anon
   //It is an asynchronous task
   Future signInAnon() async {
