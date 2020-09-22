@@ -54,6 +54,20 @@ back or null in the case that the user has logged  off/our is usuccessfult.
 Our flutter application  therefore can be able to listen to these Auth Changes and thus we can make a decision to redirect
 to the home page if the user has succesffully signed in.
 
+Flutter streams can be able to detect authentication changes in the application.Everytime there is a successful login flutter returns a
+user object and incase there is an usuccessful login it returns a null.
+
+We can be able to listen for this AUTH Changes.
+
+
+```
+
+**Flutter Provider**
+
+```
+(a)It is the google recommended package for state management in flutter.
+
+
 
 ```
 

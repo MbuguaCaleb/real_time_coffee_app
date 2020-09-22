@@ -14,14 +14,23 @@ class AuthService {
     return user != null ? User(uid: user.uid) : null;
   }
 
-  //auth change user stream
+  /*
+  FirebaseUser  is returned as a stream  everytime there is a successful signIn.
+
+  _auth.onAuthStateChanged return a firebase user or null based on the current login stattus
+
+  I am then customzing the object returned via our custom class
+
+  Thus our stream returns Stream<User> otherwise it would have returned
+  Stream<FirebaseUser>
+
+  */
+
   Stream<User> get user {
-    //the user object which we get is implicitly  applied to our
-    //function so as to format it
-    //Remember that the user object we receive from FIREBASE is a
-    //Firebase user type.
-    //<FirebaseUser user>
-    return _auth.onAuthStateChanged.map(_userFromFirebaseUser);
+    return _auth.onAuthStateChanged
+        //.map((FirebaseUser user) => _userFromFirebaseUser(user));
+        //implicitly applyying map so as to write cleaner code
+        .map(_userFromFirebaseUser);
   }
 
   //sign in anon
