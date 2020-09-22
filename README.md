@@ -65,7 +65,10 @@ We can be able to listen for this AUTH Changes.
 **Flutter Provider**
 
 ```
-(a)It is the google recommended package for state management in flutter.
+(a)It is the google recommended package for state management in flutter.The Provider wraps around the root widget ag the app and has
+access to the stream..Making data from the stream accessible to the root widget as well as other successive widgets.
+
+
 
 
 

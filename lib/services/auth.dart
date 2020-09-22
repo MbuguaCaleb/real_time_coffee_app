@@ -25,7 +25,6 @@ class AuthService {
   Stream<FirebaseUser>
 
   */
-
   Stream<User> get user {
     return _auth.onAuthStateChanged
         //.map((FirebaseUser user) => _userFromFirebaseUser(user));
