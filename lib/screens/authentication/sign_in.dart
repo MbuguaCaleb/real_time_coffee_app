@@ -22,20 +22,33 @@ class _SignInState extends State<SignIn> {
         title: Text('Sign in to Coffee App'),
       ),
       body: Container(
-        padding: EdgeInsets.symmetric(vertical: 20.0, horizontal: 50.0),
-        child: RaisedButton(
-          child: Text('Sign in anon'),
-          onPressed: () async {
-            dynamic result = await _auth.signInAnon();
-            if (result == null) {
-              print('error signing in');
-            } else {
-              print('signed in');
-              print(result.uid);
-            }
-          },
-        ),
-      ),
+          padding: EdgeInsets.symmetric(vertical: 20.0, horizontal: 50.0),
+          child: Form(
+            child: Column(
+              children: <Widget>[
+                SizedBox(
+                  height: 20.0,
+                ),
+                TextFormField(onChanged: (val) {}),
+                SizedBox(height: 20.0),
+                TextFormField(
+                  obscureText: true,
+                  onChanged: (val) {},
+                ),
+                SizedBox(
+                  height: 20.0,
+                ),
+                RaisedButton(
+                  color: Colors.pink[400],
+                  child: Text(
+                    'Sign In',
+                    style: TextStyle(color: Colors.white),
+                  ),
+                  onPressed: () async {},
+                ),
+              ],
+            ),
+          )),
     );
   }
 }
