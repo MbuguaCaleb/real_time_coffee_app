@@ -68,10 +68,13 @@ We can be able to listen for this AUTH Changes.
 (a)It is the google recommended package for state management in flutter.The Provider wraps around the root widget ag the app and has
 access to the stream..Making data from the stream accessible to the root widget as well as other successive widgets.
 
+```
 
+**Quick reminders**
 
-
-
+```
+(a)There is a Form() widget in flutter which takes in FormField()
+When i say obscure i hide the text from the inside of an input.
 ```
 
 **VS CODE FLUTTER SHOTCUTS**

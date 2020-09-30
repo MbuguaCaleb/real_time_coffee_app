@@ -1,15 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:real_time_coffee_app/services/auth.dart';
 
-class SignIn extends StatefulWidget {
+class Register extends StatefulWidget {
   @override
-  _SignInState createState() => _SignInState();
+  _RegisterState createState() => _RegisterState();
 }
 
-/*State object*/
-class _SignInState extends State<SignIn> {
-  /*bringing the auth service provider class*/
-
+class _RegisterState extends State<Register> {
   final AuthService _auth = AuthService();
 
   //text field state
@@ -23,7 +20,7 @@ class _SignInState extends State<SignIn> {
       appBar: AppBar(
         backgroundColor: Colors.brown[400],
         elevation: 0.0,
-        title: Text('Sign in to Coffee App'),
+        title: Text('Sign up to Coffee App'),
       ),
       body: Container(
           padding: EdgeInsets.symmetric(vertical: 20.0, horizontal: 50.0),
@@ -49,7 +46,7 @@ class _SignInState extends State<SignIn> {
                 RaisedButton(
                   color: Colors.pink[400],
                   child: Text(
-                    'Sign In',
+                    'Register',
                     style: TextStyle(color: Colors.white),
                   ),
                   onPressed: () async {

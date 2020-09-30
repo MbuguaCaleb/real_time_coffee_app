@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:real_time_coffee_app/screens/authentication/sign_in.dart';
+import 'package:real_time_coffee_app/screens/authentication/register.dart';
 
 class Authenticate extends StatefulWidget {
   @override
@@ -9,6 +9,6 @@ class Authenticate extends StatefulWidget {
 class _AuthenticateState extends State<Authenticate> {
   @override
   Widget build(BuildContext context) {
-    return Container(child: SignIn());
+    return Container(child: Register());
   }
 }
