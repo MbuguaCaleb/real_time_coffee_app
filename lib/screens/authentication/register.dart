@@ -11,7 +11,7 @@ class Register extends StatefulWidget {
 
 class _RegisterState extends State<Register> {
   final AuthService _auth = AuthService();
-
+  final _formKey = GlobalKey<FormState>();
   //text field state
   String email = '';
   String password = '';
@@ -39,17 +39,23 @@ class _RegisterState extends State<Register> {
       body: Container(
           padding: EdgeInsets.symmetric(vertical: 20.0, horizontal: 50.0),
           child: Form(
+            key: _formKey,
             child: Column(
               children: <Widget>[
                 SizedBox(
                   height: 20.0,
                 ),
-                TextFormField(onChanged: (val) {
-                  setState(() => email = val);
-                }),
+                TextFormField(
+                    /*validator returns null when the validation condition passes*/
+                    validator: (val) => val.isEmpty ? 'Enter and email' : null,
+                    onChanged: (val) {
+                      setState(() => email = val);
+                    }),
                 SizedBox(height: 20.0),
                 TextFormField(
                   obscureText: true,
+                  validator: (val) =>
+                      val.length < 6 ? 'Enter a password 6+ chars long' : null,
                   onChanged: (val) {
                     setState(() => password = val);
                   },
@@ -64,8 +70,17 @@ class _RegisterState extends State<Register> {
                     style: TextStyle(color: Colors.white),
                   ),
                   onPressed: () async {
-                    print(email);
-                    print(password);
+                    /*formKey tracks the current state of our form and comes in
+                    very handy during validation.
+                    Validate() function evaluates the validator properties in our 
+                    form fields.
+                    Only when it receives null from each of the form fields is the 
+                    form valid.
+                    */
+                    if (_formKey.currentState.validate()) {
+                      print(email);
+                      print(password);
+                    }
                   },
                 ),
               ],
