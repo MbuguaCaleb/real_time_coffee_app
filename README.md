@@ -65,7 +65,9 @@ We can be able to listen for this AUTH Changes.
 **Flutter Provider**
 
 ```
-(a)It is the google recommended package for state management in flutter.The Provider wraps around the root widget ag the app and has
+(a)It is the google recommended package for state management in flutter.
+
+The Provider wraps around the root widget ag the app and has
 access to the stream..Making data from the stream accessible to the root widget as well as other successive widgets.
 
 ```
@@ -73,8 +75,13 @@ access to the stream..Making data from the stream accessible to the root widget 
 **Quick reminders**
 
 ```
-(a)There is a Form() widget in flutter which takes in FormField()
-When i say obscure i hide the text from the inside of an input.
+(a)There is a Form() widget in flutter which takes in FormField().When i say obscure i hide the text from the inside of an input.
+Edge insets refers to the space/
+
+(b)purpose of the actions property under the appBar.We can pass functions from one widget to another very similary as it happens while we are using react,..passing props to components..
+
+Woow.I should look at my widgets as components.
+
 ```
 
 **VS CODE FLUTTER SHOTCUTS**

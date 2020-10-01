@@ -2,6 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:real_time_coffee_app/services/auth.dart';
 
 class SignIn extends StatefulWidget {
+  /*accepting the props which is a function 
+  and accepting them into our constructor
+  */
+  final Function toggleView;
+  SignIn({this.toggleView});
+
   @override
   _SignInState createState() => _SignInState();
 }
@@ -21,10 +27,18 @@ class _SignInState extends State<SignIn> {
     return Scaffold(
       backgroundColor: Colors.brown[100],
       appBar: AppBar(
-        backgroundColor: Colors.brown[400],
-        elevation: 0.0,
-        title: Text('Sign in to Coffee App'),
-      ),
+          backgroundColor: Colors.brown[400],
+          elevation: 0.0,
+          title: Text('Sign in to Coffee App'),
+          actions: <Widget>[
+            FlatButton.icon(
+                icon: Icon(Icons.person),
+                label: Text('Register'),
+                onPressed: () {
+                  /*accepting toggle view from the widget instance*/
+                  widget.toggleView();
+                }),
+          ]),
       body: Container(
           padding: EdgeInsets.symmetric(vertical: 20.0, horizontal: 50.0),
           child: Form(
